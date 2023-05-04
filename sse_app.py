@@ -107,6 +107,14 @@ def publish():
     except:
         return jsonify(status="fail", message="not published")
 
+# export FLASK_APP=sse_app
+# flask shell
+#
+# from sse_app import db
+# db.drop_all()
+# db.create_all()
+
+
 # gunicorn sse_app:app --worker-class gevent --bind 127.0.0.1:8000
 
 
