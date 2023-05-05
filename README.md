@@ -22,10 +22,10 @@ SSE (Server Sent Events)
 
 <ul>
  <li> Для работы SSE Вам необходимо подключиться к Redis. Создайте свой RedisOM https://redis.io/docs/stack/get-started/tutorials/stack-python/ или подключитесь к уже развернутому
- <li> Далее необходимо добавить Redis_url в sse_app</li>
+ <li> Далее необходимо добавить Redis_url в переменные окружения</li>
 </ul>
 
-        app.config["REDIS_URL"] = "redis://:yourpassword@localhost:6379"
+    export REDIS_URL="redis://:password@localhost:6379"
 
 <ul>
  <li> Совершите миграции БД через flask shell</li>

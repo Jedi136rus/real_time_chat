@@ -1,8 +1,7 @@
 from sse_app import db
 
-import os
-
-from sqlalchemy.sql import func
+db.drop_all()
+db.create_all()
 
 
 

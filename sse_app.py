@@ -6,7 +6,7 @@ import os
 import json
 
 app = Flask(__name__)
-app.config["REDIS_URL"] = "redis://:password@localhost:6379"
+app.config["REDIS_URL"] = os.getenv("REDIS_URL")
 app.register_blueprint(sse, url_prefix='/stream')
 
 basedir = os.path.abspath(os.path.dirname(__file__))
