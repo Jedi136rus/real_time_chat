@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  redis:
+    image: redis:latest
+    container_name: redis_chat
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6379:6379"
+  server:
+    build: .
+    command: gunicorn sse_app:app --worker-class gevent --bind 0.0.0.0:8000
+    ports:
+      - 8000:8000
