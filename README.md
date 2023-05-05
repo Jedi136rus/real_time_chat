@@ -17,7 +17,9 @@ SSE (Server Sent Events)
 <ul>
  <li> Не забудьте активировать виртуальное окружение! </li>
 </ul>
+
     source venv/bin/activate
+
 <ul>
  <li> Для работы SSE Вам необходимо подключиться к Redis. Создайте свой RedisOM https://redis.io/docs/stack/get-started/tutorials/stack-python/ или подключитесь к уже развернутому
  <li> Далее необходимо добавить Redis_url в sse_app</li>
